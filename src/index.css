@@ -21,6 +21,8 @@ code {
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   text-align: right;
 }
 
@@ -34,6 +36,8 @@ code {
 }
 
 .display {
+  display: flex;
+  justify-content: flex-end;
   background: gray;
   height: 100px;
   padding: 5px 20px;
@@ -43,20 +47,33 @@ code {
 }
 
 .button-panel {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .group {
+  display: flex;
+  width: 100%;
   height: 100px;
 }
 
 .button {
-  border: lightgray solid 2px;
+  border: rgb(173, 173, 173) solid 1px;
   font-size: 2rem;
   width: 25%;
   height: 100%;
+  text-align: center;
+  flex-basis: 1;
 }
 
-.zero {
+.large-button {
   width: 50%;
+}
+
+.orange {
+  background: rgb(255, 155, 61);
+}
+
+.gray {
+  background: lightgray;
 }
