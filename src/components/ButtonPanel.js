@@ -5,37 +5,37 @@ import Button from './Button';
 const ButtonPanel = () => (
   <div className="button-panel">
     <div className="group group1">
-      <Button className="button" color="gray" buttonName="AC" />
-      <Button className="button" color="gray" buttonName="+/-" />
-      <Button className="button" color="gray" buttonName="%" />
-      <Button className="button" buttonName="+" />
+      <Button color="gray" buttonName="AC" />
+      <Button color="gray" buttonName="+/-" />
+      <Button color="gray" buttonName="%" />
+      <Button buttonName="+" />
     </div>
 
     <div className="group group2">
-      <Button className="button" color="gray" buttonName="7" />
-      <Button className="button" color="gray" buttonName="8" />
-      <Button className="button" color="gray" buttonName="9" />
-      <Button className="button" buttonName="X" />
+      <Button color="gray" buttonName="7" />
+      <Button color="gray" buttonName="8" />
+      <Button color="gray" buttonName="9" />
+      <Button buttonName="X" />
     </div>
 
     <div className="group group3">
-      <Button className="button" color="gray" buttonName="4" />
-      <Button className="button" color="gray" buttonName="5" />
-      <Button className="button" color="gray" buttonName="6" />
-      <Button className="button" buttonName="-" />
+      <Button color="gray" buttonName="4" />
+      <Button color="gray" buttonName="5" />
+      <Button color="gray" buttonName="6" />
+      <Button buttonName="-" />
     </div>
 
     <div className="group group4">
-      <Button className="button" color="gray" buttonName="1" />
-      <Button className="button" color="gray" buttonName="2" />
-      <Button className="button" color="gray" buttonName="3" />
-      <Button className="button" buttonName="+" />
+      <Button color="gray" buttonName="1" />
+      <Button color="gray" buttonName="2" />
+      <Button color="gray" buttonName="3" />
+      <Button buttonName="+" />
     </div>
 
     <div className="group group5">
-      <Button className="button" wide={true} buttonName="0" />
-      <Button className="button" buttonName="." />
-      <Button className="button" buttonName="=" />
+      <Button wide={true} buttonName="0" />
+      <Button buttonName="." />
+      <Button buttonName="=" />
     </div>
   </div>
 );
