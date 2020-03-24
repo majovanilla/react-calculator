@@ -18,7 +18,6 @@ code {
 
 #root {
   margin: auto;
-  width: 60%;
 }
 
 .app {
@@ -30,17 +29,34 @@ code {
 }
 
 .calculator-body {
-  border: 1px solid black;
-  width: 50%;
+  width: 700px;
   margin: auto;
 }
 
-.result {
-  border-bottom: 1px solid black;
-  padding-right: 10px;
+.display {
+  background: gray;
+  height: 100px;
+  padding: 5px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.button-panel {
+
+}
+
+.group {
+  height: 100px;
 }
 
 .button {
+  border: lightgray solid 2px;
+  font-size: 2rem;
   width: 25%;
-  height: 50px;
+  height: 100%;
+}
+
+.zero {
+  width: 50%;
 }
