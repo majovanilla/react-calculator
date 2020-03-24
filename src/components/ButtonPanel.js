@@ -1,41 +1,41 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-// import Button from './Button';
+import Button from './Button';
 
 const ButtonPanel = () => (
   <div className="button-panel">
-    <div className="group1">
-      <button type="submit" className="button">AC</button>
-      <button type="submit" className="button">+/-</button>
-      <button type="submit" className="button">%</button>
-      <button type="submit" className="button">+</button>
+    <div className="group group1">
+      <Button className="button" color="gray" buttonName="AC" />
+      <Button className="button" color="gray" buttonName="+/-" />
+      <Button className="button" color="gray" buttonName="%" />
+      <Button className="button" buttonName="+" />
     </div>
 
-    <div className="group2">
-      <button type="submit" className="button">7</button>
-      <button type="submit" className="button">8</button>
-      <button type="submit" className="button">9</button>
-      <button type="submit" className="button">X</button>
+    <div className="group group2">
+      <Button className="button" color="gray" buttonName="7" />
+      <Button className="button" color="gray" buttonName="8" />
+      <Button className="button" color="gray" buttonName="9" />
+      <Button className="button" buttonName="X" />
     </div>
 
-    <div className="group3">
-      <button type="submit" className="button">4</button>
-      <button type="submit" className="button">5</button>
-      <button type="submit" className="button">6</button>
-      <button type="submit" className="button">-</button>
+    <div className="group group3">
+      <Button className="button" color="gray" buttonName="4" />
+      <Button className="button" color="gray" buttonName="5" />
+      <Button className="button" color="gray" buttonName="6" />
+      <Button className="button" buttonName="-" />
     </div>
 
-    <div className="group4">
-      <button type="submit" className="button">1</button>
-      <button type="submit" className="button">2</button>
-      <button type="submit" className="button">3</button>
-      <button type="submit" className="button">+</button>
+    <div className="group group4">
+      <Button className="button" color="gray" buttonName="1" />
+      <Button className="button" color="gray" buttonName="2" />
+      <Button className="button" color="gray" buttonName="3" />
+      <Button className="button" buttonName="+" />
     </div>
 
-    <div className="group5">
-      <button type="submit" className="button">0</button>
-      <button type="submit" className="button">.</button>
-      <button type="submit" className="button">=</button>
+    <div className="group group5">
+      <Button className="button" wide={true} buttonName="0" />
+      <Button className="button" buttonName="." />
+      <Button className="button" buttonName="=" />
     </div>
   </div>
 );
