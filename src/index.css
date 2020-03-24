@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,33 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  margin: auto;
+  width: 60%;
+}
+
+.app {
+  text-align: right;
+}
+
+.main-title {
+ text-align: center;
+}
+
+.calculator-body {
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+}
+
+.result {
+  border-bottom: 1px solid black;
+  padding-right: 10px;
+}
+
+.button {
+  width: 25%;
+  height: 50px;
 }
