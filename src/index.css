@@ -18,10 +18,11 @@ code {
 
 #root {
   margin: auto;
-  width: 60%;
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   text-align: right;
 }
 
@@ -30,17 +31,49 @@ code {
 }
 
 .calculator-body {
-  border: 1px solid black;
-  width: 50%;
+  width: 700px;
   margin: auto;
 }
 
-.result {
-  border-bottom: 1px solid black;
-  padding-right: 10px;
+.display {
+  display: flex;
+  justify-content: flex-end;
+  background: gray;
+  height: 100px;
+  padding: 5px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.button-panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.group {
+  display: flex;
+  width: 100%;
+  height: 100px;
 }
 
 .button {
+  border: rgb(173, 173, 173) solid 1px;
+  font-size: 2rem;
   width: 25%;
-  height: 50px;
+  height: 100%;
+  text-align: center;
+  flex-basis: 1;
+}
+
+.large-button {
+  width: 50%;
+}
+
+.orange {
+  background: rgb(255, 155, 61);
+}
+
+.gray {
+  background: lightgray;
 }
