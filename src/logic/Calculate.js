@@ -18,7 +18,7 @@ function Calculate(dataObj, buttonName) {
       if (total && !next) {
         return { total, next, operation: buttonName };
       }
-      return 'Please add a number first';
+      return { total, next, operation };
 
     case '=':
       if (total && next === null && operation) {
@@ -37,7 +37,7 @@ function Calculate(dataObj, buttonName) {
       break;
 
     case '.':
-      if (next) {
+      if (next !== null) {
         const char = next.split('')[-1];
         if (char === '.') return { total, next, operation };
         return { total, next: (`${next}.`), operation };

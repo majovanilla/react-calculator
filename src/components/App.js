@@ -12,18 +12,17 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
-  }
 
-  handleClick = clickedButton => {
-    this.setState(Calculate(this.state, clickedButton));
-  }
+    this.handleClick = clickedButton => {
+      this.setState(prevState => Calculate(prevState, clickedButton));
+    };
 
-  renderDisplay = values => {
-    const { total, next, operation } = values;
-    if (!total && !next && !operation) return '0';
-    return `${total ? total : ""} ${operation ? operation : ""} ${next ? next : ""}`;
+    this.renderDisplay = values => {
+      const { total, next, operation } = values;
+      if (!total && !next && !operation) return '0';
+      return `${total || ''} ${operation || ''} ${next || ''}`;
+    };
   }
-
 
   render() {
     return (
