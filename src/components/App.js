@@ -13,6 +13,11 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = (clickedButton) => {
+    this.setState(Calculate(this.state, clickedButton));
   }
 
   render() {
@@ -23,7 +28,7 @@ class App extends React.Component {
           <h1 className="main-title">Calculator Milestone 3</h1>
         </header>
         <div className="calculator-body">
-          <Display total={total} />
+          <Display result={next || total} />
           <ButtonPanel />
         </div>
       </div>
