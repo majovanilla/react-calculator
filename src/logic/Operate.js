@@ -9,13 +9,13 @@ const operate = (numOne, numTwo, operation) => {
 
   switch (operation) {
     case '/':
-      return bigOne.div(bigTwo);
+      return bigOne.div(bigTwo).toString();
     case 'x':
-      return bigOne.times(bigTwo);
+      return bigOne.times(bigTwo).toString();
     case '-':
-      return bigOne.minus(bigTwo);
+      return bigOne.minus(bigTwo).toString();
     case '+':
-      return bigOne.plus(bigTwo);
+      return bigOne.plus(bigTwo).toString();
     case '%':
       return bigTwo.div(100);
     default:
