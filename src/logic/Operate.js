@@ -1,5 +1,6 @@
 /* eslint-disable func-names */
 /* eslint-disable quote-props */
+/* eslint-disable import/extensions */
 import Big from 'big.js';
 
 const operate = (numOne, numTwo, operation) => {
