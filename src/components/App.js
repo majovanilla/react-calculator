@@ -9,19 +9,21 @@ class App extends React.Component {
     super();
 
     this.state = {
-      result: '0',
+      total: null,
+      next: null,
+      operation: null,
     };
   }
 
   render() {
-    const { result } = this.state;
+    const { total, next, operation } = this.state;
     return (
       <div className="app">
         <header>
           <h1 className="main-title">Calculator Milestone 3</h1>
         </header>
         <div className="calculator-body">
-          <Display result={result} />
+          <Display total={total} />
           <ButtonPanel />
         </div>
       </div>
