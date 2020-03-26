@@ -8,7 +8,7 @@ const operate = (numOne, numTwo, operation) => {
   const bigTwo = Big(numTwo);
 
   switch (operation) {
-    case '/':
+    case '÷':
       return bigOne.div(bigTwo).toString();
     case 'x':
       return bigOne.times(bigTwo).toString();
