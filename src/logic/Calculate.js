@@ -21,9 +21,6 @@ function Calculate(dataObj, buttonName) {
 
     case '=':
       if (total && next && operation) {
-        // if (operation === '%') {
-        //   return { total: operate(0, next, operation), next: 0, operation: null }
-        // }
         return { total: operate(total, next, operation), next: 0, operation: null };
       }
       return { total, next, operation };
