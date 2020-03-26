@@ -17,7 +17,7 @@ const operate = (numOne, numTwo, operation) => {
     case '+':
       return bigOne.plus(bigTwo).toString();
     case '%':
-      return bigTwo.div(100);
+      return bigTwo.div(100).toString();
     default:
       return 0;
   }
