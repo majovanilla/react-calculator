@@ -1,6 +1,6 @@
 import operate from './Operate';
 
-const Calculate = (dataObj, buttonName) => {
+function Calculate(dataObj, buttonName) {
   const { total, next, operation } = dataObj;
 
   switch (buttonName) {
@@ -49,6 +49,6 @@ const Calculate = (dataObj, buttonName) => {
       }
     }
   }
-};
+}
 
 export default Calculate;
