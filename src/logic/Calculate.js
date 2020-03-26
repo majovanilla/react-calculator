@@ -21,6 +21,9 @@ function Calculate(dataObj, buttonName) {
 
     case '=':
       if (total && next && operation) {
+        // if (operation === '%') {
+        //   return { total: operate(0, next, operation), next: 0, operation: null }
+        // }
         return { total: operate(total, next, operation), next: 0, operation: null };
       }
       return { total, next, operation };
@@ -32,6 +35,8 @@ function Calculate(dataObj, buttonName) {
       return { total: total * -1, next: next * -1, operation };
 
     case '%':
+      if (next) return { total, next: operate(0, next, buttonName), operation };
+      if (total) return { total: operate(0, total, next, buttonName), operation };
       break;
 
     case '.':
@@ -40,7 +45,7 @@ function Calculate(dataObj, buttonName) {
         if (char === '.') return { total, next, operation };
         return { total, next: (`${next}.`), operation };
       }
-      return { total, next: '.', operation };
+      return { total, next: '0.', operation };
 
     default: {
       const number = parseInt(buttonName, 10);
