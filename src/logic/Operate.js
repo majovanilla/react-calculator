@@ -16,6 +16,8 @@ const operate = (numOne, numTwo, operation) => {
       return bigOne.minus(bigTwo);
     case '+':
       return bigOne.plus(bigTwo);
+    case '%':
+      return bigTwo.div(100);
     default:
       return 0;
   }
