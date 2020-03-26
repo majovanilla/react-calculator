@@ -8,14 +8,14 @@ const ButtonPanel = () => (
       <Button color="gray" buttonName="AC" />
       <Button color="gray" buttonName="+/-" />
       <Button color="gray" buttonName="%" />
-      <Button buttonName="+" />
+      <Button buttonName="÷" />
     </div>
 
     <div className="group group2">
       <Button color="gray" buttonName="7" />
       <Button color="gray" buttonName="8" />
       <Button color="gray" buttonName="9" />
-      <Button buttonName="X" />
+      <Button buttonName="x" />
     </div>
 
     <div className="group group3">
@@ -33,8 +33,8 @@ const ButtonPanel = () => (
     </div>
 
     <div className="group group5">
-      <Button wide buttonName="0" />
-      <Button buttonName="." />
+      <Button wide color="gray" buttonName="0" />
+      <Button color="gray" buttonName="." />
       <Button buttonName="=" />
     </div>
   </div>
