@@ -28,8 +28,8 @@ class App extends React.Component {
           <h1 className="main-title">Calculator Milestone 3</h1>
         </header>
         <div className="calculator-body">
-          <Display result={next || total} />
-          <ButtonPanel />
+          <Display result={next ? next : total} />
+          <ButtonPanel clickHandler={this.handleClick} />
         </div>
       </div>
     );
