@@ -32,6 +32,7 @@ function Calculate(dataObj, buttonName) {
       return { total: total * -1, next: next * -1, operation };
 
     case '%':
+      // if (total && next)
       if (next) return { total, next: (operate(0, next, buttonName)), operation };
       break;
 
