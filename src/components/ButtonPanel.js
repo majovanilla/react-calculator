@@ -22,7 +22,7 @@ const ButtonPanel = ({ clickHandler }) => {
             {
               buttonRow.map((buttonName, btnIndex) => (
                 <Button
-                  key={createID(btnIndex)}
+                  key={createID(buttonName)}
                   clickHandler={handleClick}
                   buttonName={buttonName}
                   color={(btnIndex === 3 || buttonName === '=') ? 'gray' : undefined}

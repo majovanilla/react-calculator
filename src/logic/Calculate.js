@@ -38,9 +38,8 @@ function Calculate(dataObj, buttonName) {
 
     case '.':
       if (next !== null) {
-        const char = next.split('');
-        const lastChar = char[char.length - 1];
-        if (lastChar === '.') return { total, next, operation };
+        const char = next.toString().slice(-1);
+        if (char === '.') return { total, next, operation };
         return { total, next: (`${next}.`), operation };
       }
       return { total, next: '0.', operation };
@@ -53,9 +52,8 @@ function Calculate(dataObj, buttonName) {
         }
       }
       if (next !== null) {
-        const char = next.split('');
-        const lastChar = char[char.length - 1];
-        if (lastChar === '.') return { total, next: `${next}${number}`, operation };
+        const char = next.toString().slice(-1);
+        if (char === '.') return { total, next: `${next}${number}`, operation };
       }
       return { total, next: next * 10 + number, operation };
     }
