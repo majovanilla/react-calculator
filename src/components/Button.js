@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Button = ({
   clickHandler, buttonName, color, wide,
 }) => {
-  const handleClick = buttonName => clickHandler(buttonName);
+  const handleClick = () => clickHandler(buttonName);
 
   return (
     <button
