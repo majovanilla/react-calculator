@@ -55,7 +55,7 @@ function Calculate(dataObj, buttonName) {
         const char = next.toString().slice(-1);
         if (char === '.') return { total, next: `${next}${number}`, operation };
       }
-      return { total, next: next * 10 + number, operation };
+      return { total, next: `${next || ''}${number}`, operation };
     }
   }
 }
