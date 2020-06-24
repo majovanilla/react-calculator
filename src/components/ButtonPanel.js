@@ -1,42 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => (
-  <div className="button-panel">
-    <div className="group group1">
-      <Button color="gray" buttonName="AC" />
-      <Button color="gray" buttonName="+/-" />
-      <Button color="gray" buttonName="%" />
-      <Button buttonName="÷" />
-    </div>
+const ButtonPanel = ({ clickHandler }) => {
+  const handleClick = buttonName => clickHandler(buttonName);
+  const buttonNames = [
+    ['AC', '+/-', '%', '÷'],
+    ['7', '8', '9', 'x'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
 
-    <div className="group group2">
-      <Button color="gray" buttonName="7" />
-      <Button color="gray" buttonName="8" />
-      <Button color="gray" buttonName="9" />
-      <Button buttonName="x" />
-    </div>
+  const createID = prefix => `${prefix}-${new Date().getTime()}`;
 
-    <div className="group group3">
-      <Button color="gray" buttonName="4" />
-      <Button color="gray" buttonName="5" />
-      <Button color="gray" buttonName="6" />
-      <Button buttonName="-" />
+  return (
+    <div className="button-panel">
+      {
+        buttonNames.map((buttonRow, rowIndex) => (
+          <div key={createID(rowIndex)} className={`group group${rowIndex}`}>
+            {
+              buttonRow.map((buttonName, btnIndex) => (
+                <Button
+                  key={createID(buttonName)}
+                  clickHandler={handleClick}
+                  buttonName={buttonName}
+                  color={(btnIndex === 3 || buttonName === '=') ? 'gray' : undefined}
+                  wide={buttonName === '0'}
+                />
+              ))
+            }
+          </div>
+        ))
+      }
     </div>
+  );
+};
 
-    <div className="group group4">
-      <Button color="gray" buttonName="1" />
-      <Button color="gray" buttonName="2" />
-      <Button color="gray" buttonName="3" />
-      <Button buttonName="+" />
-    </div>
-
-    <div className="group group5">
-      <Button wide color="gray" buttonName="0" />
-      <Button color="gray" buttonName="." />
-      <Button buttonName="=" />
-    </div>
-  </div>
-);
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;

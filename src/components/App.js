@@ -1,7 +1,6 @@
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-// eslint-disable-next-line no-unused-vars
 import Calculate from '../logic/Calculate';
 
 class App extends React.Component {
@@ -9,20 +8,31 @@ class App extends React.Component {
     super();
 
     this.state = {
-      result: '0',
+      total: null,
+      next: null,
+      operation: null,
+    };
+
+    this.handleClick = clickedButton => {
+      this.setState(prevState => Calculate(prevState, clickedButton));
+    };
+
+    this.renderDisplay = values => {
+      const { total, next, operation } = values;
+      if (!total && !next && !operation) return '0';
+      return `${total || ''} ${operation || ''} ${next || ''}`;
     };
   }
 
   render() {
-    const { result } = this.state;
     return (
       <div className="app">
         <header>
           <h1 className="main-title">Calculator Milestone 3</h1>
         </header>
         <div className="calculator-body">
-          <Display result={result} />
-          <ButtonPanel />
+          <Display result={this.renderDisplay(this.state)} />
+          <ButtonPanel clickHandler={this.handleClick} />
         </div>
       </div>
     );
